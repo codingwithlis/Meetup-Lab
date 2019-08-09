@@ -1,21 +1,46 @@
-import React, { component } from 'React';
+import React, { Component } from 'React'
 
-const Form = (props) => (
-  <div>
-      <div class="attendee-form">
+class Form extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      firstName:'',
+      lastName:'',
+      email:'',
+      shirtSize:'',
+      skillLevel:''
+    }
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(ev) {
+    const { name, value } = ev.target
+    this.setState({
+      [ name ]: value
+    })
+  }
+  
+  render() {
+    return (
+    <form className="attendee-form" onChange={this.handleChange} onSubmit={(e) => { this.props.handleSubmit(this.state)}}>
+      <div className="fullName">
         <h2>Register Attendee</h2>
         <label>First Name:
-          <input type="text"></input>
+          <input value={this.state.firstName} name="firstName" type="text" required></input>
         </label>
         <label>Last Name:
-          <input type="text"></input>
+          <input value={this.state.lastName} name="lastName" type="text" required ></input>
         </label>
+       </div>
+        <div>
         <label>Email Address:
-          <input type="text"></input>
+          <input value={this.state.email} name="email" type="text" required ></input>
         </label>
+        </div>
         <div className="sizes">
           <label>Shirt Size: </label>
-          <select>
+          <select name="sizes" required>
+            <option ></option>
             <option value="XS">XS</option>
             <option value="S">S</option>
             <option value="M">M</option>
@@ -26,17 +51,17 @@ const Form = (props) => (
         </div>
         <div className="experience">
           <label>Experience Level: </label>
-          <select>
+          <select name="skillLevel" required >
+            <option ></option>
             <option value="beginner">Beginner</option>
             <option value="intermediate">Intermediate</option>
             <option value="expert">Expert</option>
           </select>
         </div>
-        <button>REGISTER</button>
-      </div>
+        <button type="submit">REGISTER</button>
+      </form>
+    )
+  };
+};
 
-  </div>
-)
-
-//
-export default Form;
+export default Form

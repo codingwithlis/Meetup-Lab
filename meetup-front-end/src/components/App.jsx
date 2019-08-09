@@ -11,8 +11,13 @@ class App extends React.Component {
       intermediate: [],
       expert: []
     }
+    // this.handleSubmit = this.handleSubmit.bind(this);
     this.getAttendees = this.getAttendees.bind(this);
   }
+  
+  componentDidMount() {
+    this.getAttendees();
+  };
 
   getAttendees() {
     axios.get('http://localhost:3000/attendees')
@@ -37,17 +42,24 @@ class App extends React.Component {
         expert: expert
         })
       });
-  }
-
-  componentDidMount() {
-    this.getAttendees();
   };
+
+  handleSubmit(data) {
+    fetch('http://localhost:3000/attendees/', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(() => this.getAttendees())
+  }
 
   render() {
     return (
       <div className="main">
+      <Form handleSubmit={this.handleSubmit.bind(this)}/>
       <Attendees beginner={this.state.beginner} intermediate={this.state.intermediate} expert={this.state.expert}/>
-      <Form />
       </div>
     )
   }
