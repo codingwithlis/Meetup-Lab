@@ -1,38 +1,6 @@
 {
   "attendees": [
     {
-      "id": 1,
-      "firstName": "Malcom",
-      "lastName": "Reynolds",
-      "email": "captain@serenity.com",
-      "shirt": "L",
-      "skillLevel": "expert"
-    },
-    {
-      "id": 2,
-      "firstName": "Zoe",
-      "lastName": "Washburn",
-      "email": "zoew@gmail.com",
-      "shirt": "S",
-      "skillLevel": "intermediate"
-    },
-    {
-      "id": 5,
-      "firstName": "Kaylee",
-      "lastName": "Frye",
-      "email": "kaylee@serenity.com",
-      "shirt": "S",
-      "skillLevel": "expert"
-    },
-    {
-      "firstName": "Maria",
-      "lastName": "Alfonso-Martinez",
-      "email": "lisandralfonso@yahoo.com",
-      "shirtSize": "",
-      "skillLevel": "expert",
-      "id": 7
-    },
-    {
       "firstName": "Maria",
       "lastName": "Lola",
       "email": "lisandralfonso@yahoo.com",
@@ -65,14 +33,6 @@
       "id": 18
     },
     {
-      "firstName": "Lis",
-      "lastName": "Alfonso-Martinez",
-      "email": "lisandralfonso@yahoo.com",
-      "shirtSize": "",
-      "skillLevel": "expert",
-      "id": 19
-    },
-    {
       "firstName": "Paula",
       "lastName": "Alfonso-Martinez",
       "email": "lisandralfonso@yahoo.com",
@@ -82,40 +42,58 @@
       "id": 21
     },
     {
-      "firstName": "Pola",
-      "lastName": "Alfonso-Martinez",
-      "email": "lisandralfonso@yahoo.com",
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "john.smith@yahoo.com",
+      "shirtSize": "",
+      "skillLevel": "beginner",
+      "sizes": "XXL",
+      "id": 22
+    },
+    {
+      "firstName": "Maria ",
+      "lastName": "Perez",
+      "email": "maria.perez@gmail.com",
       "shirtSize": "",
       "skillLevel": "intermediate",
-      "sizes": "M",
+      "sizes": "S",
       "id": 23
     },
     {
-      "firstName": "Pol",
-      "lastName": "Liona",
-      "email": "polliona@gmail.com",
+      "firstName": "Katy",
+      "lastName": "White",
+      "email": "katy.white@gmail.com",
+      "shirtSize": "",
+      "skillLevel": "expert",
+      "sizes": "M",
+      "id": 24
+    },
+    {
+      "firstName": "Jonathan",
+      "lastName": "Bill",
+      "email": "jonatha.bill@yahoo.com",
       "shirtSize": "",
       "skillLevel": "intermediate",
-      "sizes": "M",
+      "sizes": "S",
       "id": 25
     },
     {
-      "firstName": "Lili",
-      "lastName": "Alfonso-Martinez",
-      "email": "lisandralfonso@yahoo.com",
+      "firstName": "Daniel",
+      "lastName": "Thompson",
+      "email": "daniel.thompson@yahoo.com",
       "shirtSize": "",
       "skillLevel": "beginner",
       "sizes": "S",
-      "id": 41
+      "id": 26
     },
     {
-      "firstName": "Leyanis",
-      "lastName": "Fuentes",
-      "email": "lala@yahoo.com",
+      "firstName": "Laura",
+      "lastName": "Claire",
+      "email": "laura.claire@gmail.com",
       "shirtSize": "",
-      "skillLevel": "beginner",
-      "sizes": "XS",
-      "id": 42
+      "skillLevel": "intermediate",
+      "sizes": "S",
+      "id": 27
     }
   ]
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import Attendees from './Attendees.jsx'
 import Form from './Form.jsx'
 import axios from 'axios';
+import LoginPage from './LoginPage.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,7 +10,10 @@ class App extends React.Component {
     this.state = {
       beginner: [],
       intermediate: [],
-      expert: []
+      expert: [],
+      username: null,
+      userId: 0,
+      loggedIn: false, 
     }
     this.getAttendees = this.getAttendees.bind(this);
     this.deletePerson = this.deletePerson.bind(this);
@@ -66,6 +70,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="main">
+      {/* <LoginPage /> */}
       <Form handleSubmit={this.handleSubmit.bind(this)}/>
       <Attendees deletePerson={this.deletePerson} beginner={this.state.beginner} intermediate={this.state.intermediate} expert={this.state.expert}/>
       </div>
