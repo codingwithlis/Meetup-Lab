@@ -58,7 +58,7 @@ class Form extends Component {
             <option value="expert">Expert</option>
           </select>
         </div>
-        <button type="submit">REGISTER</button>
+        <button className="registerButton" type="submit">REGISTER</button>
       </form>
     )
   };

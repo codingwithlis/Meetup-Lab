@@ -62,10 +62,19 @@ input:focus {
   border-bottom:2px solid #2a79a7;
 }
 
-button {
+.registerButton {
   float:right;
   padding:8px 12px;
   margin: 50px 0px 0px 0px;
+  border:2px solid #5C8BA5;
+  background: #f7f7f7;
+  cursor:pointer;
+  transition:all .3s;
+}
+
+.deleteButton {
+  /* float:right; */
+  padding:2px 6px;
   border:2px solid #5C8BA5;
   background: #f7f7f7;
   cursor:pointer;

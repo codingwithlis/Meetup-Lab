@@ -11,8 +11,8 @@ class App extends React.Component {
       intermediate: [],
       expert: []
     }
-    // this.handleSubmit = this.handleSubmit.bind(this);
     this.getAttendees = this.getAttendees.bind(this);
+    this.deletePerson = this.deletePerson.bind(this);
   }
   
   componentDidMount() {
@@ -27,13 +27,13 @@ class App extends React.Component {
       let expert = [];
       for (let i = 0; i < response.data.length; i ++){
         if(response.data[i].skillLevel === 'beginner'){
-          beginner.push(response.data[i].firstName + ' ' + response.data[i].lastName );
+          beginner.push(response.data[i]);
         };
         if(response.data[i].skillLevel === 'intermediate'){
-          intermediate.push(response.data[i].firstName + ' ' + response.data[i].lastName );
+          intermediate.push(response.data[i]);
         };
         if(response.data[i].skillLevel === 'expert'){
-          expert.push(response.data[i].firstName + ' ' + response.data[i].lastName );
+          expert.push(response.data[i]);
         };
       }
       this.setState({
@@ -55,15 +55,25 @@ class App extends React.Component {
     .then(() => this.getAttendees())
   }
 
+  deletePerson(event){
+    fetch(`http://localhost:3000/attendees/${event.target.name}`, {
+      method: 'DELETE',
+      body: JSON.stringify(event.target.name),
+    })
+    .then(() => this.getAttendees())
+  }
+
   render() {
     return (
       <div className="main">
       <Form handleSubmit={this.handleSubmit.bind(this)}/>
-      <Attendees beginner={this.state.beginner} intermediate={this.state.intermediate} expert={this.state.expert}/>
+      <Attendees deletePerson={this.deletePerson} beginner={this.state.beginner} intermediate={this.state.intermediate} expert={this.state.expert}/>
       </div>
     )
   }
 }
 
 export default App;
+
+
 

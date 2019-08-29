@@ -6,19 +6,19 @@ const Attendees = (props) => (
       <h3>Beginner</h3>
       {
         props.beginner.map((att, i) => (
-          <div key={i}>{att}</div>
+          <div key={i}>{att.firstName + ' ' + att.lastName} <button name={att.id} className="deleteButton" onClick={props.deletePerson} > x </button> </div>
         ))
       }
     <h3>Intermediate</h3>
       {
         props.intermediate.map((att, i) => (
-          <div key={i}>{att}</div>
+          <div key={i}>{att.firstName + ' ' + att.lastName} <button name={att.id} className="deleteButton"  onClick={props.deletePerson} > x </button> </div>
         ))
       }
     <h3>Expert</h3>
       {
         props.expert.map((att, i) => (
-          <div key={i}>{att}</div>
+          <div key={i}>{att.firstName + ' ' + att.lastName} <button name={att.id} className="deleteButton"  onClick={props.deletePerson} > x </button> </div>
         ))
       }
   </div>
